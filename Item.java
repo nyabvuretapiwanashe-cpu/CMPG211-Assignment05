@@ -1,44 +1,42 @@
 
-
-class Item
-{
-    private String title;
-    private int year;
+class Item {
     
-    public Item()
-    {
+    private String title; 
+    private int year;     
+
+    
+    public Item() {
         
     }
-    
-    public Item(String title, int year)
-    {
+
+    public Item(String title, int year) {
+        this.title = title; 
+        this.year = year;   
+    }
+
+    // Setter method to change the title later
+    public void setTitle(String title) {
         this.title = title;
+    }
+
+    // Setter method to change the year later
+    public void setYear(int year) {
         this.year = year;
     }
-    
-    public void setTitle(String title)
-    {
-        this.title = title;
-    }
-    
-    public void setYear(int year)
-    {
-        this.year = year;
-    }
-    
-    public String getTitle()
-    {
+
+    // Getter method to retrieve the title
+    public String getTitle() {
         return title;
     }
-    
-    public int getYear()
-    {
+
+    // Getter method to retrieve the year
+    public int getYear() {
         return year;
     }
-    
+
     @Override
-    public String toString()
-    {
-        return String.format ("Movie Title: %s \n Year: %d" , title, year);
+    public String toString() {
+        // Format: Title and Year
+        return String.format("Title: %s | Year: %d", title, year);
     }
 }
